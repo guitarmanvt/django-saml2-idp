@@ -99,7 +99,4 @@ INSTALLED_APPS = (
     'saml2idp',
 )
 
-LOGIN_REDIRECT_URL = '/idp/sso/post/response/preview/'
-SAML2IDP_SIGNING = True
-SAML2IDP_PRIVATE_KEY_FILE = PROJECT_ROOT + '/keys/sample/sample-private-key.pem'
-SAML2IDP_CERTIFICATE_FILE = PROJECT_ROOT + '/keys/sample/sample-certificate.pem'
+LOGIN_REDIRECT_URL = '/idp/sso/post/response/'
