@@ -1,4 +1,13 @@
 #!/usr/bin/env python
+# Dynamically add the "lib" packages; you won't need to do this in production
+# if you install samltoss into your system site packages.
+import os
+import sys
+pythonpath = os.environ.get('PYTHONPATH', '')
+libpath = os.path.abspath('../lib')
+sys.path.append(libpath)
+
+# Now start the Django machinery.
 from django.core.management import execute_manager
 try:
     import settings # Assumed to be in the same directory.
